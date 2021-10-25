@@ -1,21 +1,46 @@
 package net.javaproject.springboot.model;
 
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "vehicles")
+
+
 public class VehicleInfo {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String make;
-	private String model;
+	
+	@Column(name= "vehicle_make")
+	private String vehicleMake;
+	
+	@Column(name= "vehicle_model")
+	private String vehicleModel;
+	
+	@Column(name= "number_plate")
 	private int numberPlate;
+	
+	@Column(name= "owner_name")
 	private String ownerName;
+	
+	@Column(name= "ownner_email")
 	private String ownerEmail;
 	
 	public VehicleInfo () {
 		
 	}
 	
-	public VehicleInfo(String make, String model, int numberPlate, String ownerName, String ownerEmail) {
+	public VehicleInfo(String vehicleMake, String vehicleModel, int numberPlate, String ownerName, String ownerEmail) {
 		super();
-		this.make = make;
-		this.model = model;
+		this.vehicleMake = vehicleMake;
+		this.vehicleModel = vehicleModel;
 		this.numberPlate = numberPlate;
 		this.ownerName = ownerName;
 		this.ownerEmail = ownerEmail;
@@ -29,16 +54,16 @@ public class VehicleInfo {
 		this.id = id;
 	}
 	public String getMake() {
-		return make;
+		return vehicleMake;
 	}
 	public void setMake(String make) {
-		this.make = make;
+		this.vehicleMake = make;
 	}
 	public String getModel() {
-		return model;
+		return vehicleModel;
 	}
 	public void setModel(String model) {
-		this.model = model;
+		this.vehicleModel = model;
 	}
 	public int getNumberPlate() {
 		return numberPlate;
