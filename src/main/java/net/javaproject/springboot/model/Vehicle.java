@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "vehicles")
 
 
-public class VehicleInfo {
+public class Vehicle {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,14 +30,14 @@ public class VehicleInfo {
 	@Column(name= "owner_name")
 	private String ownerName;
 	
-	@Column(name= "ownner_email")
+	@Column(name= "owner_email")
 	private String ownerEmail;
 	
-	public VehicleInfo () {
+	public Vehicle () {
 		
 	}
 	
-	public VehicleInfo(String vehicleMake, String vehicleModel, int numberPlate, String ownerName, String ownerEmail) {
+	public Vehicle(String vehicleMake, String vehicleModel, int numberPlate, String ownerName, String ownerEmail) {
 		super();
 		this.vehicleMake = vehicleMake;
 		this.vehicleModel = vehicleModel;
