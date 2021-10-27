@@ -18,11 +18,11 @@ public class Vehicle {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name= "vehicle_make")
-	private String vehicleMake;
+	@Column(name= "make")
+	private String Make;
 	
-	@Column(name= "vehicle_model")
-	private String vehicleModel;
+	@Column(name= "model")
+	private String Model;
 	
 	@Column(name= "number_plate")
 	private int numberPlate;
@@ -37,10 +37,10 @@ public class Vehicle {
 		
 	}
 	
-	public Vehicle(String vehicleMake, String vehicleModel, int numberPlate, String ownerName, String ownerEmail) {
+	public Vehicle(String Make, String Model, int numberPlate, String ownerName, String ownerEmail) {
 		super();
-		this.vehicleMake = vehicleMake;
-		this.vehicleModel = vehicleModel;
+		this.Make = Make;
+		this.Model = Model;
 		this.numberPlate = numberPlate;
 		this.ownerName = ownerName;
 		this.ownerEmail = ownerEmail;
@@ -54,16 +54,16 @@ public class Vehicle {
 		this.id = id;
 	}
 	public String getMake() {
-		return vehicleMake;
+		return Make;
 	}
 	public void setMake(String make) {
-		this.vehicleMake = make;
+		this.Make = make;
 	}
 	public String getModel() {
-		return vehicleModel;
+		return Model;
 	}
 	public void setModel(String model) {
-		this.vehicleModel = model;
+		this.Model = model;
 	}
 	public int getNumberPlate() {
 		return numberPlate;
